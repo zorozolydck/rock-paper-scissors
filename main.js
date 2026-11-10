@@ -29,6 +29,7 @@ let computerScore = 0
 function playRound(humanChoice, computerChoice){
      humanChoice = humanChoice.toLowerCase();
     if(humanChoice == computerChoice){
+        console.log("tie")
         return "tie";
     }
         else if(humanChoice == "rock" && computerChoice == "scissors"){
@@ -63,9 +64,15 @@ function playGame(){
 
 for(let i=0; i<5; i++){
 playGame()
-if(humanScore == 5){
-    console.log("Human wins the game")
-}else if(computerScore == 5){
-    console.log("Computer wins the game")
 }
-    }
+if(humanScore > computerScore){
+    console.log("Human wins the game")
+    alert("Human wins the game")
+}else if(computerScore > humanScore){
+    console.log("Computer wins the game")
+    alert("Computer wins the game")
+}
+else{
+    console.log("Tie")
+    alert("Tie")
+}
